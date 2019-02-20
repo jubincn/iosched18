@@ -31,6 +31,9 @@ local.properties
 !.idea/copyright
 !.idea/codeStyles/codeStyleConfig.xml
 
+# mobile idea files
+mobile/.idea/*
+
 # Gradle cache
 .gradle
 

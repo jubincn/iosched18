@@ -16,6 +16,7 @@
 
 package com.google.samples.apps.iosched
 
+import com.facebook.stetho.Stetho
 import com.google.samples.apps.iosched.di.DaggerAppComponent
 import com.google.samples.apps.iosched.shared.analytics.AnalyticsHelper
 import com.google.samples.apps.iosched.util.CrashlyticsTree
@@ -41,6 +42,7 @@ class MainApplication : DaggerApplication() {
             Timber.plant(CrashlyticsTree())
         }
 
+        Stetho.initializeWithDefaults(this)
         // ThreeTenBP for times and dates
         AndroidThreeTen.init(this)
     }
