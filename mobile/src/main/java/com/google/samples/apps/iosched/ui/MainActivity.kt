@@ -45,7 +45,8 @@ class MainActivity : DaggerAppCompatActivity() {
     @Inject
     lateinit var snackbarMessageManager: SnackbarMessageManager
 
-    @Inject lateinit var viewModelFactory: ViewModelProvider.Factory
+    @Inject
+    lateinit var viewModelFactory: ViewModelProvider.Factory
 
     private lateinit var currentFragment: MainNavigationFragment
 
@@ -82,7 +83,7 @@ class MainActivity : DaggerAppCompatActivity() {
             // Find the current fragment
             currentFragment =
                 supportFragmentManager.findFragmentById(FRAGMENT_ID) as? MainNavigationFragment
-                ?: throw IllegalStateException("Activity recreated, but no fragment found!")
+                    ?: throw IllegalStateException("Activity recreated, but no fragment found!")
         }
     }
 
